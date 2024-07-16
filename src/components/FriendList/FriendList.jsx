@@ -6,7 +6,7 @@ function FriendList({friends}) {
     return (
     <ul className={styles.friendList}>
     {friends.map(friend =>(
-        <friendListIem 
+        <FriendListIem 
         key={friend.id}
         avatar={friend.avatar}
         name={friend.name}
