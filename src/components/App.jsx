@@ -1,14 +1,14 @@
 import Profile from "./profile";
-import user from "../data/user.json"
+import user from "./profile/user.json"
 import Statistics from "./statistics";
-import data from "../data/data.json"
+import data from "./statistics/data.json"
 import FriendList from "./FriendList";
-import friends from "../data/friends.json"
+import friends from "./FriendList/friends.json"
 import TransacationHistory from "./TransactionHistory";
 import transaction from "../data/transaction.json";
 import React from "react";
 
-export const App = () => {
+ const App = () => {
   return (
     <div
       style={{
@@ -23,9 +23,19 @@ export const App = () => {
         
       }}
     >
-      <Profile />
-      <Statistics />
-      <FriendList />
+      <Profile
+      username={user.username}
+      tag={user.tag}
+      location={user.location}
+      stats={user.stats}/>
+      <Statistics
+      title="UPLOAD STATS"
+      stats={data}/>
+      
+      <FriendList 
+      friends={friendsData}/>
     </div>
   );
 };
+
+export default App;
