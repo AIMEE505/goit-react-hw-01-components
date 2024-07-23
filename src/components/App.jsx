@@ -4,11 +4,10 @@ import Statistics from "./statistics";
 import data from "./statistics/data.json"
 import FriendList from "./FriendList";
 import friends from "./FriendList/friends.json"
-import TransacationHistory from "./TransactionHistory";
-import transaction from "../data/transaction.json";
+import TransactionHistory from "./TransactionHistory";
 import React from "react";
 
- const App = () => {
+ function App () {
   return (
     <div
       style={{
@@ -29,11 +28,11 @@ import React from "react";
       location={user.location}
       stats={user.stats}/>
       <Statistics
-      title="UPLOAD STATS"
+      title="Upload stats"
       stats={data}/>
-      
       <FriendList 
-      friends={friendsData}/>
+      friends={friends}/>
+      <TransactionHistory items={TransactionHistoryData} />
     </div>
   );
 };
