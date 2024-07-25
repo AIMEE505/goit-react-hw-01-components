@@ -25,15 +25,15 @@ import React from "react";
       }}
     >
       <Profile
-      username={user.username}
-      tag={user.tag}
-      location={user.location}
-      stats={user.stats}/>
-      <Statistics
-      title="Upload stats"
-      stats={data}/>
-      <FriendList 
-      friends={friends}/>
+  username={user.username}
+  tag={user.tag}
+  location={user.location}
+  avatar={user.avatar}
+  stats={user.stats}
+  />
+    <Statistics title="Upload stats" stats={data} />
+<Statistics stats={data} />
+<FriendList friends={friends} />
       <TransactionHistory items={transaction} />
     </div>
   );
